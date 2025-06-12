@@ -1,24 +1,18 @@
-{
-  "photos": [
-    "1.jpg",
-    "2.jpg",
-    "3.jpg",
-    "4.jpg",
-    "5.jpg",
-    "6.jpg",
-    "7.jpg",
-    "8.jpg",
-    "9.jpg",
-    "10.jpg",
-    "11.jpg",
-    "12.jpg",
-    "13.jpg",
-    "14.jpg",
-    "15.jpg",
-    "16.jpg",
-    "17.jpg",
-    "18.jpg",
-    "19.jpg",
-    "20.jpg"
-  ]
-}
+[
+  {"src": "1.jpg", "category": "Portrait", "alt": "Photo 1"},
+  {"src": "2.jpg", "category": "Paysage", "alt": "Photo 2"},
+  {"src": "3.jpg", "category": "OnMyBike", "alt": "Photo 3"},
+  {"src": "4.jpg", "category": "Portrait", "alt": "Photo 4"},
+  {"src": "5.jpg", "category": "Paysage", "alt": "Photo 5"},
+  {"src": "6.jpg", "category": "OnMyBike", "alt": "Photo 6"},
+  {"src": "7.jpg", "category": "Portrait", "alt": "Photo 7"},
+  {"src": "8.jpg", "category": "Paysage", "alt": "Photo 8"},
+  {"src": "9.jpg", "category": "OnMyBike", "alt": "Photo 9"},
+  {"src": "10.jpg", "category": "Portrait", "alt": "Photo 10"},
+
+  {"src": "11.jpg", "category": "Paysage", "alt": "Nouvelle Photo 11"},
+  {"src": "12.jpg", "category": "OnMyBike", "alt": "Nouvelle Photo 12"},
+  {"src": "13.jpg", "category": "Portrait", "alt": "Nouvelle Photo 13"},
+  {"src": "14.jpg", "category": "Paysage", "alt": "Nouvelle Photo 14"},
+  {"src": "15.jpg", "category": "OnMyBike", "alt": "Nouvelle Photo 15"}
+]
