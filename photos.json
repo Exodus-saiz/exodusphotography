@@ -1,18 +1,17 @@
 [
-  {"src": "1.jpg", "category": "Portrait", "alt": "Photo 1"},
-  {"src": "2.jpg", "category": "Paysage", "alt": "Photo 2"},
-  {"src": "3.jpg", "category": "OnMyBike", "alt": "Photo 3"},
-  {"src": "4.jpg", "category": "Portrait", "alt": "Photo 4"},
-  {"src": "5.jpg", "category": "Paysage", "alt": "Photo 5"},
-  {"src": "6.jpg", "category": "OnMyBike", "alt": "Photo 6"},
-  {"src": "7.jpg", "category": "Portrait", "alt": "Photo 7"},
-  {"src": "8.jpg", "category": "Paysage", "alt": "Photo 8"},
-  {"src": "9.jpg", "category": "OnMyBike", "alt": "Photo 9"},
-  {"src": "10.jpg", "category": "Portrait", "alt": "Photo 10"},
-
-  {"src": "11.jpg", "category": "Paysage", "alt": "Nouvelle Photo 11"},
-  {"src": "12.jpg", "category": "OnMyBike", "alt": "Nouvelle Photo 12"},
-  {"src": "13.jpg", "category": "Portrait", "alt": "Nouvelle Photo 13"},
-  {"src": "14.jpg", "category": "Paysage", "alt": "Nouvelle Photo 14"},
-  {"src": "15.jpg", "category": "OnMyBike", "alt": "Nouvelle Photo 15"}
+  {"src": "images/1.jpg", "alt": "Photo 1"},
+  {"src": "images/2.jpg", "alt": "Photo 2"},
+  {"src": "images/3.jpg", "alt": "Photo 3"},
+  {"src": "images/4.jpg", "alt": "Photo 4"},
+  {"src": "images/5.jpg", "alt": "Photo 5"},
+  {"src": "images/6.jpg", "alt": "Photo 6"},
+  {"src": "images/7.jpg", "alt": "Photo 7"},
+  {"src": "images/8.jpg", "alt": "Photo 8"},
+  {"src": "images/9.jpg", "alt": "Photo 9"},
+  {"src": "images/10.jpg", "alt": "Photo 10"},
+  {"src": "images/11.jpg", "alt": "Photo 11"},
+  {"src": "images/12.jpg", "alt": "Photo 12"},
+  {"src": "images/13.jpg", "alt": "Photo 13"},
+  {"src": "images/14.jpg", "alt": "Photo 14"},
+  {"src": "images/15.jpg", "alt": "Photo 15"}
 ]
