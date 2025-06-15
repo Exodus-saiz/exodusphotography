@@ -9,6 +9,51 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <body>
+
+<section id="paiement" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+  <h2>Paiement et téléchargement des photos</h2>
+  <p>
+    Pour acheter une photo HD, veuillez effectuer le paiement de 1000 FCFA via Moov Money au numéro :<br>
+    <strong>+229 0155 289 731</strong>
+  </p>
+
+  <button onclick="alert('Merci de payer sur Moov Money au +229 0155 289 731 puis remplir le formulaire ci-dessous.')" 
+          style="background-color:#FF6200; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:5px;">
+    Payer avec Moov Money
+  </button>
+
+  <form id="formPaiement" style="margin-top:20px;" onsubmit="return validerFormulaire()">
+    <label for="nom">Nom complet *</label><br>
+    <input type="text" id="nom" name="nom" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+    <label for="email">Email *</label><br>
+    <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+    <label for="photo">Nom ou description de la photo souhaitée *</label><br>
+    <input type="text" id="photo" name="photo" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+    <label for="message">Message / preuve de paiement (optionnel)</label><br>
+    <textarea id="message" name="message" rows="3" style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
+
+    <button type="submit" style="background-color:#007BFF; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:5px;">
+      Envoyer la demande
+    </button>
+  </form>
+
+  <p style="font-size: 0.9em; color: #555; margin-top: 10px;">
+    Après réception de votre demande, je vous contacterai par email ou WhatsApp pour vous envoyer la photo HD.
+  </p>
+</section>
+
+<script>
+  function validerFormulaire() {
+    alert('Merci pour votre demande. Je vous contacterai rapidement après vérification du paiement.');
+    return false;
+  }
+</script>
+
+<!-- Le reste de ton contenu HTML -->
     <header>
         <img src="images/logo.png" alt="Logo Exodus" class="logo">
         <h1>Exodus Photography</h1>
