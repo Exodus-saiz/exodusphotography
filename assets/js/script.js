@@ -1,1 +1,0 @@
-// JavaScript de la galerie
