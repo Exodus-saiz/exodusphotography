@@ -33,3 +33,79 @@ footer {
     background: #eee;
     font-size: 0.9em;
 }
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exodus Photography</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Exodus Photography</h1>
+    <p>Je suis Exodus, béninois et passionné de vie.
+    Chaque image est un instant de grâce, un regard sur le monde, un bout de lumière capturé avec foi.
+    Bienvenue dans mon univers..</p>
+  </header>
+
+  <main>
+    <!-- Boutons pour basculer entre galeries -->
+    <div class="gallery-tabs">
+      <button id="btnPhotos" class="active">Galerie Photos</button>
+      <button id="btnVideos">Galerie Vidéos</button>
+    </div>
+
+    <div class="galleries-container">
+      <section class="gallery photos active">
+        <h2>Galerie Photos</h2>
+        <!-- tes images (tu gardes tout le bloc d’images tel quel) -->
+        <!-- Je ne recolle pas ici pour raccourcir, mais tu gardes tout ton bloc <img> -->
+      </section>
+
+      <section class="gallery videos">
+        <h2>Galerie Vidéos</h2>
+        <!-- tes vidéos (idem, garde tout ton bloc <video>) -->
+      </section>
+    </div>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="https://wa.me/2290155289731">WhatsApp</a> | 
+        <a href="https://www.instagram.com/exodussaizonou?igsh=MWN4M3Q4YTVjZHRwbA%3D%3D&utm_source=qr">Instagram</a> |
+        <a href="https://www.tiktok.com/@exodussaizonou10may?_t=ZN-8xFhg5LuGzW&_r=1">TikTok</a> |
+        <a href="https://x.com/exodussaizonou?s=21">X</a> |
+        <a href="https://www.threads.com/@exodus_saizonou?igshid=NTc4MTIwNjQ2YQ==">Threads</a> |
+        <a href="https://www.google.com/gasearch?q=exodus%20saizonou&source=sh/x/gs/m2/5">Google</a> |
+        <a href="https://www.facebook.com/share/15mgCZMnh8/?mibextid=wwXIfr">Facebook</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="grace">Tout est grâce. Gloire à Dieu pour chaque instant capturé.</p>
+  </footer>
+
+  <script>
+    const btnPhotos = document.getElementById('btnPhotos');
+    const btnVideos = document.getElementById('btnVideos');
+    const galleryPhotos = document.querySelector('.gallery.photos');
+    const galleryVideos = document.querySelector('.gallery.videos');
+
+    btnPhotos.addEventListener('click', () => {
+      btnPhotos.classList.add('active');
+      btnVideos.classList.remove('active');
+      galleryPhotos.classList.add('active');
+      galleryVideos.classList.remove('active');
+    });
+
+    btnVideos.addEventListener('click', () => {
+      btnVideos.classList.add('active');
+      btnPhotos.classList.remove('active');
+      galleryVideos.classList.add('active');
+      galleryPhotos.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
