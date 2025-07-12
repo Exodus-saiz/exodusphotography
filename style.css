@@ -1,111 +1,79 @@
-
+/* Style général */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fdfdfd;
-    color: #222;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+  color: #222;
 }
 header {
-    background: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-.about, .socials {
-    padding: 20px;
-}
-.socials ul {
-    list-style-type: none;
-    padding: 0;
-}
-.socials li {
-    margin-bottom: 10px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 footer {
-    text-align: center;
-    padding: 15px;
-    background: #eee;
-    font-size: 0.9em;
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  font-size: 0.9em;
 }
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exodus Photography</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Exodus Photography</h1>
-    <p>Je suis Exodus, béninois et passionné de vie.
-    Chaque image est un instant de grâce, un regard sur le monde, un bout de lumière capturé avec foi.
-    Bienvenue dans mon univers..</p>
-  </header>
 
-  <main>
-    <!-- Boutons pour basculer entre galeries -->
-    <div class="gallery-tabs">
-      <button id="btnPhotos" class="active">Galerie Photos</button>
-      <button id="btnVideos">Galerie Vidéos</button>
-    </div>
+/* Onglets */
+.gallery-tabs {
+  margin: 20px 0;
+  text-align: center;
+}
+.gallery-tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.gallery-tabs button.active,
+.gallery-tabs button:hover {
+  background-color: #333;
+  color: white;
+}
 
-    <div class="galleries-container">
-      <section class="gallery photos active">
-        <h2>Galerie Photos</h2>
-        <!-- tes images (tu gardes tout le bloc d’images tel quel) -->
-        <!-- Je ne recolle pas ici pour raccourcir, mais tu gardes tout ton bloc <img> -->
-      </section>
+/* Masquer les galeries par défaut */
+.gallery {
+  display: none;
+}
+.gallery.active {
+  display: block;
+}
 
-      <section class="gallery videos">
-        <h2>Galerie Vidéos</h2>
-        <!-- tes vidéos (idem, garde tout ton bloc <video>) -->
-      </section>
-    </div>
+/* Galerie images et vidéos */
+.gallery.photos img,
+.gallery.videos video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+}
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>
-        <a href="https://wa.me/2290155289731">WhatsApp</a> | 
-        <a href="https://www.instagram.com/exodussaizonou?igsh=MWN4M3Q4YTVjZHRwbA%3D%3D&utm_source=qr">Instagram</a> |
-        <a href="https://www.tiktok.com/@exodussaizonou10may?_t=ZN-8xFhg5LuGzW&_r=1">TikTok</a> |
-        <a href="https://x.com/exodussaizonou?s=21">X</a> |
-        <a href="https://www.threads.com/@exodus_saizonou?igshid=NTc4MTIwNjQ2YQ==">Threads</a> |
-        <a href="https://www.google.com/gasearch?q=exodus%20saizonou&source=sh/x/gs/m2/5">Google</a> |
-        <a href="https://www.facebook.com/share/15mgCZMnh8/?mibextid=wwXIfr">Facebook</a>
-      </p>
-    </section>
-  </main>
+/* Conteneur central */
+.galleries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-  <footer>
-    <p class="grace">Tout est grâce. Gloire à Dieu pour chaque instant capturé.</p>
-  </footer>
-
-  <script>
-    const btnPhotos = document.getElementById('btnPhotos');
-    const btnVideos = document.getElementById('btnVideos');
-    const galleryPhotos = document.querySelector('.gallery.photos');
-    const galleryVideos = document.querySelector('.gallery.videos');
-
-    btnPhotos.addEventListener('click', () => {
-      btnPhotos.classList.add('active');
-      btnVideos.classList.remove('active');
-      galleryPhotos.classList.add('active');
-      galleryVideos.classList.remove('active');
-    });
-
-    btnVideos.addEventListener('click', () => {
-      btnVideos.classList.add('active');
-      btnPhotos.classList.remove('active');
-      galleryVideos.classList.add('active');
-      galleryPhotos.classList.remove('active');
-    });
-  </script>
-</body>
-</html>
+/* Section contact */
+.contact {
+  padding: 20px;
+  text-align: center;
+}
+.contact a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
