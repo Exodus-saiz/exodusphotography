@@ -143,3 +143,25 @@
   </script>
 </body>
 </html>
+<script>
+    const btnPhotos = document.getElementById('btnPhotos');
+    const btnVideos = document.getElementById('btnVideos');
+    const galleryPhotos = document.querySelector('.gallery.photos');
+    const galleryVideos = document.querySelector('.gallery.videos');
+
+    btnPhotos.addEventListener('click', () => {
+      btnPhotos.classList.add('active');
+      btnVideos.classList.remove('active');
+      galleryPhotos.classList.add('active');
+      galleryVideos.classList.remove('active');
+    });
+
+    btnVideos.addEventListener('click', () => {
+      btnVideos.classList.add('active');
+      btnPhotos.classList.remove('active');
+      galleryVideos.classList.add('active');
+      galleryPhotos.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
