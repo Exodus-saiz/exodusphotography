@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exographie</title>
   <meta name="description" content="Portfolio de photographie par Exographie, regard lumineux et poétique sur le monde.">
+  <meta name="author" content="Exodus SAÏZONOU">
+  <meta name="keywords" content="photographie, portfolio, bénin, exographie, exodus saizonou, art visuel, photo, vidéo">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 
@@ -20,7 +22,7 @@
 
     /* ===== HEADER ===== */
     header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298); /* bleu dégradé */
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
       text-align: center;
       padding: 100px 20px 60px;
@@ -106,7 +108,7 @@
 
     /* ===== GALLERIES ===== */
     .galleries-container {
-      background: radial-gradient(circle at top, #e0f7fa 0%, #b2ebf2 100%); /* fond stylé bleu clair */
+      background: radial-gradient(circle at top, #e0f7fa 0%, #b2ebf2 100%);
       padding: 40px 0;
     }
 
@@ -131,6 +133,8 @@
 
     .gallery img {
       width: 100%;
+      height: auto;
+      object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -139,6 +143,54 @@
     .gallery img:hover {
       transform: scale(1.03);
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    /* ===== VIDEO GRID ===== */
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    /* ===== VIDEO CARD ===== */
+    .video-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .video-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 3em;
+      border-radius: 50%;
+      padding: 20px 25px;
+      transition: background-color 0.3s;
+    }
+
+    .video-card:hover .play-icon {
+      background-color: rgba(255, 102, 0, 0.8);
     }
 
     /* ===== CONTACT ===== */
@@ -191,7 +243,7 @@
   <header>
     <h1><span>E</span>xographie</h1>
     <p>
-      Je suis <strong>Exodus SAÏZONOU </strong>, photographe béninois passionné par la vie et la lumière.<br>
+      Je suis <strong>Exodus SAÏZONOU</strong>, photographe béninois passionné par la vie et la lumière.<br>
       Chaque image est un souffle de grâce, un regard sincère sur le monde,<br>
       un fragment d’âme saisi avec foi et émotion.<br><br>
       <em>Bienvenue dans mon univers.</em>
@@ -208,146 +260,56 @@
       <!-- Galerie Photos -->
       <section class="gallery photos active">
         <h2>Galerie Photos</h2>
-        <!-- Toutes les 123 images avec lazy loading -->
-        <img src="images/photo123.jpg" alt="photo123" loading="lazy" />
-        <img src="images/photo122.jpg" alt="photo122" loading="lazy" />
-        <img src="images/photo121.jpg" alt="photo121" loading="lazy" />
-        <img src="images/photo120.jpg" alt="photo120" loading="lazy" />
-        <img src="images/photo119.jpg" alt="photo119" loading="lazy" />
-        <img src="images/photo118.jpg" alt="photo118" loading="lazy" />
-        <img src="images/photo117.jpg" alt="photo117" loading="lazy" />
-        <img src="images/photo116.jpg" alt="photo116" loading="lazy" />
-        <img src="images/photo115.jpg" alt="photo115" loading="lazy" />
-        <img src="images/photo114.jpg" alt="photo114" loading="lazy" />
-        <img src="images/photo113.jpg" alt="photo113" loading="lazy" />
-        <img src="images/photo112.jpg" alt="photo112" loading="lazy" />
-        <img src="images/photo111.jpg" alt="photo111" loading="lazy" />
-        <img src="images/photo110.jpg" alt="photo110" loading="lazy" />
-        <img src="images/photo109.jpg" alt="photo109" loading="lazy" />
-        <img src="images/photo108.jpg" alt="photo108" loading="lazy" />
-        <img src="images/photo107.jpg" alt="photo107" loading="lazy" />
-        <img src="images/photo106.jpg" alt="photo106" loading="lazy" />
-        <img src="images/photo105.jpg" alt="photo105" loading="lazy" />
-        <img src="images/photo104.jpg" alt="photo104" loading="lazy" />
-        <img src="images/photo103.jpg" alt="photo103" loading="lazy" />
-        <img src="images/photo102.jpg" alt="photo102" loading="lazy" />
-        <img src="images/photo101.jpg" alt="photo101" loading="lazy" />
-        <img src="images/photo100.jpg" alt="photo100" loading="lazy" />
-        <img src="images/photo99.jpg" alt="photo99" loading="lazy" />
-        <img src="images/photo98.jpg" alt="photo98" loading="lazy" />
-        <img src="images/photo97.jpg" alt="photo97" loading="lazy" />
-        <img src="images/photo96.jpg" alt="photo96" loading="lazy" />
-        <img src="images/photo95.jpg" alt="photo95" loading="lazy" />
-        <img src="images/photo94.jpg" alt="photo94" loading="lazy" />
-        <img src="images/photo93.jpg" alt="photo93" loading="lazy" />
-        <img src="images/photo92.jpg" alt="photo92" loading="lazy" />
-        <img src="images/photo91.jpg" alt="photo91" loading="lazy" />
-        <img src="images/photo90.jpg" alt="photo90" loading="lazy" />
-        <img src="images/photo89.jpg" alt="photo89" loading="lazy" />
-        <img src="images/photo88.jpg" alt="photo88" loading="lazy" />
-        <img src="images/photo87.jpg" alt="photo87" loading="lazy" />
-        <img src="images/photo86.jpg" alt="photo86" loading="lazy" />
-        <img src="images/photo85.jpg" alt="photo85" loading="lazy" />
-        <img src="images/photo84.jpg" alt="photo84" loading="lazy" />
-        <img src="images/photo83.jpg" alt="photo83" loading="lazy" />
-        <img src="images/photo82.jpg" alt="photo82" loading="lazy" />
-        <img src="images/photo81.jpg" alt="photo81" loading="lazy" />
-        <img src="images/photo80.jpg" alt="photo80" loading="lazy" />
-        <img src="images/photo79.jpg" alt="photo79" loading="lazy" />
-        <img src="images/photo78.jpg" alt="photo78" loading="lazy" />
-        <img src="images/photo77.jpg" alt="photo77" loading="lazy" />
-        <img src="images/photo76.jpg" alt="photo76" loading="lazy" />
-        <img src="images/photo75.jpg" alt="photo75" loading="lazy" />
-        <img src="images/photo74.jpg" alt="photo74" loading="lazy" />
-        <img src="images/photo73.jpg" alt="photo73" loading="lazy" />
-        <img src="images/photo72.jpg" alt="photo72" loading="lazy" />
-        <img src="images/photo71.jpg" alt="photo71" loading="lazy" />
-        <img src="images/photo70.jpg" alt="photo70" loading="lazy" />
-        <img src="images/photo69.jpg" alt="photo69" loading="lazy" />
-        <img src="images/photo68.jpg" alt="photo68" loading="lazy" />
-        <img src="images/photo67.jpg" alt="photo67" loading="lazy" />
-        <img src="images/photo66.jpg" alt="photo66" loading="lazy" />
-        <img src="images/photo65.jpg" alt="photo65" loading="lazy" />
-        <img src="images/photo64.jpg" alt="photo64" loading="lazy" />
-        <img src="images/photo63.jpg" alt="photo63" loading="lazy" />
-        <img src="images/photo62.jpg" alt="photo62" loading="lazy" />
-        <img src="images/photo61.jpg" alt="photo61" loading="lazy" />
-        <img src="images/photo60.jpg" alt="photo60" loading="lazy" />
-        <img src="images/photo59.jpg" alt="photo59" loading="lazy" />
-        <img src="images/photo58.jpg" alt="photo58" loading="lazy" />
-        <img src="images/photo57.jpg" alt="photo57" loading="lazy" />
-        <img src="images/photo56.jpg" alt="photo56" loading="lazy" />
-        <img src="images/photo55.jpg" alt="photo55" loading="lazy" />
-        <img src="images/photo54.jpg" alt="photo54" loading="lazy" />
-        <img src="images/photo53.jpg" alt="photo53" loading="lazy" />
-        <img src="images/photo52.jpg" alt="photo52" loading="lazy" />
-        <img src="images/photo51.jpg" alt="photo51" loading="lazy" />
-        <img src="images/photo50.jpg" alt="photo50" loading="lazy" />
-        <img src="images/photo49.jpg" alt="photo49" loading="lazy" />
-        <img src="images/photo48.jpg" alt="photo48" loading="lazy" />
-        <img src="images/photo47.jpg" alt="photo47" loading="lazy" />
-        <img src="images/photo46.jpg" alt="photo46" loading="lazy" />
-        <img src="images/photo45.jpg" alt="photo45" loading="lazy" />
-        <img src="images/photo44.jpg" alt="photo44" loading="lazy" />
-        <img src="images/photo43.jpg" alt="photo43" loading="lazy" />
-        <img src="images/photo42.jpg" alt="photo42" loading="lazy" />
-        <img src="images/photo41.jpg" alt="photo41" loading="lazy" />
-        <img src="images/photo40.jpg" alt="photo40" loading="lazy" />
-        <img src="images/photo39.jpg" alt="photo39" loading="lazy" />
-        <img src="images/photo38.jpg" alt="photo38" loading="lazy" />
-        <img src="images/photo37.jpg" alt="photo37" loading="lazy" />
-        <img src="images/photo35.jpg" alt="photo35" loading="lazy" />
-        <img src="images/photo34.jpg" alt="photo34" loading="lazy" />
-        <img src="images/photo33.jpg" alt="photo33" loading="lazy" />
-        <img src="images/photo32.jpg" alt="photo32" loading="lazy" />
-        <img src="images/photo31.jpg" alt="photo31" loading="lazy" />
-        <img src="images/photo30.jpg" alt="photo30" loading="lazy" />
-        <img src="images/photo29.jpg" alt="photo29" loading="lazy" />
-        <img src="images/photo28.jpg" alt="photo28" loading="lazy" />
-        <img src="images/photo27.jpg" alt="photo27" loading="lazy" />
-        <img src="images/photo26.jpg" alt="photo26" loading="lazy" />
-        <img src="images/photo25.jpg" alt="photo25" loading="lazy" />
-        <img src="images/photo24.jpg" alt="photo24" loading="lazy" />
-        <img src="images/photo23.jpg" alt="photo23" loading="lazy" />
-        <img src="images/photo22.jpg" alt="photo22" loading="lazy" />
-        <img src="images/photo21.jpg" alt="photo21" loading="lazy" />
-        <img src="images/photo20.jpg" alt="photo20" loading="lazy" />
-        <img src="images/photo19.jpg" alt="photo19" loading="lazy" />
-        <img src="images/photo18.jpg" alt="photo18" loading="lazy" />
-        <img src="images/photo17.jpg" alt="photo17" loading="lazy" />
-        <img src="images/photo16.jpg" alt="photo16" loading="lazy" />
-        <img src="images/photo15.jpg" alt="photo15" loading="lazy" />
-        <img src="images/photo14.jpg" alt="photo14" loading="lazy" />
-        <img src="images/photo13.jpg" alt="photo13" loading="lazy" />
-        <img src="images/photo12.jpg" alt="photo12" loading="lazy" />
-        <img src="images/photo11.jpg" alt="photo11" loading="lazy" />
-        <img src="images/photo10.jpg" alt="photo10" loading="lazy" />
-        <img src="images/photo9.jpg" alt="photo9" loading="lazy" />
-        <img src="images/photo8.jpg" alt="photo8" loading="lazy" />
-        <img src="images/photo7.jpg" alt="photo7" loading="lazy" />
-        <img src="images/photo6.jpg" alt="photo6" loading="lazy" />
-        <img src="images/photo5.jpg" alt="photo5" loading="lazy" />
-        <img src="images/photo4.jpg" alt="photo4" loading="lazy" />
-        <img src="images/photo3.jpg" alt="photo3" loading="lazy" />
-        <img src="images/photo2.jpg" alt="photo2" loading="lazy" />
-        <img src="images/photo1.jpg" alt="photo1" loading="lazy" />
+        <img src="images/photo1.jpg" alt="Photo Exographie 1" loading="lazy">
+        <!-- Ajoute ici tes autres images photo2.jpg à photo123.jpg -->
       </section>
 
       <!-- Galerie Vidéos -->
       <section class="gallery videos">
         <h2>Galerie Vidéos</h2>
-        <p style="text-align:center;">À venir bientôt… 🎥</p>
+        <div class="videos-grid">
+          <div class="video-card">
+            <a href="https://vm.tiktok.com/ZNdTEGJEx/" target="_blank" rel="noopener noreferrer">
+              <img src="images/video1.jpg" alt="Exographie – Vidéo TikTok 1" loading="lazy">
+              <div class="play-icon">▶</div>
+            </a>
+          </div>
+          <div class="video-card">
+            <a href="https://vm.tiktok.com/ZNdTEceER/" target="_blank" rel="noopener noreferrer">
+              <img src="images/video2.jpg" alt="Exographie – Vidéo TikTok 2" loading="lazy">
+              <div class="play-icon">▶</div>
+            </a>
+          </div>
+          <div class="video-card">
+            <a href="https://vm.tiktok.com/ZNdTojABX/" target="_blank" rel="noopener noreferrer">
+              <img src="images/video3.jpg" alt="Exographie – Vidéo TikTok 3" loading="lazy">
+              <div class="play-icon">▶</div>
+            </a>
+          </div>
+          <div class="video-card">
+            <a href="https://vm.tiktok.com/ZNdTohdLw/" target="_blank" rel="noopener noreferrer">
+              <img src="images/video4.jpg" alt="Exographie – Vidéo TikTok 4" loading="lazy">
+              <div class="play-icon">▶</div>
+            </a>
+          </div>
+          <div class="video-card">
+            <a href="https://vm.tiktok.com/ZNdTorraw/" target="_blank" rel="noopener noreferrer">
+              <img src="images/video5.jpg" alt="Exographie – Vidéo TikTok 5" loading="lazy">
+              <div class="play-icon">▶</div>
+            </a>
+          </div>
+        </div>
       </section>
     </div>
 
     <section class="contact">
-      <<h2>Contact</h2>
+      <h2>Contact</h2>
       <p>
         <a href="https://wa.me/2290155289731">WhatsApp</a> |
         <a href="https://www.instagram.com/exodussaizonou">Instagram</a> |
         <a href="https://www.tiktok.com/@exodussaizonou10may">TikTok</a> |
         <a href="https://x.com/exodussaizonou?s=21">X</a> |
-        <a href="https://www.threads.com/@exodus_saizonou">Threads</a> |
+        <a href="https://www.threads.net/@exodus_saizonou">Threads</a> |
         <a href="https://www.google.com/search?q=exodus+saizonou">Google</a> |
         <a href="https://www.facebook.com/share/15mgCZMnh8/?mibextid=wwXIfr">Facebook</a>
       </p>
@@ -376,8 +338,7 @@
       btnPhotos.classList.remove('active');
       galleryVideos.classList.add('active');
       galleryPhotos.classList.remove('active');
-
- });
+    });
   </script>
 </body>
 </html>
