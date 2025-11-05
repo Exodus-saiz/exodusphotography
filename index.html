@@ -117,12 +117,12 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px 20px 60px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
     }
 
     .gallery.active {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
       animation: fadeIn 0.6s ease;
     }
 
@@ -145,28 +145,18 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
 
-    /* ===== VIDEO GRID ===== */
-    .videos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
-
     /* ===== VIDEO CARD ===== */
     .video-card {
       position: relative;
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .video-card:hover {
       transform: scale(1.03);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
 
     .video-card img {
@@ -190,7 +180,7 @@
     }
 
     .video-card:hover .play-icon {
-      background-color: rgba(255, 102, 0, 0.8);
+      background-color: rgba(255,102,0,0.8);
     }
 
     /* ===== CONTACT ===== */
@@ -260,45 +250,41 @@
       <!-- Galerie Photos -->
       <section class="gallery photos active">
         <h2>Galerie Photos</h2>
-        <img src="images/photo1.jpg" alt="Photo Exographie 1" loading="lazy">
-        <!-- Ajoute ici tes autres images photo2.jpg à photo123.jpg -->
+        <!-- 123 images -->
+        <!-- Pour éviter de surcharger ici, je montre le pattern : -->
+        <!-- <img src="images/photo1.jpg" alt="Photo 1" loading="lazy"> ... jusqu'à photo123.jpg -->
+        <!-- Tu remplaces par toutes tes 123 images réelles dans ton dossier images/ -->
+        <!-- Exemple : -->
+        <img src="images/photo1.jpg" alt="Photo 1" loading="lazy">
+        <img src="images/photo2.jpg" alt="Photo 2" loading="lazy">
+        <img src="images/photo3.jpg" alt="Photo 3" loading="lazy">
+        <!-- ... -->
+        <img src="images/photo123.jpg" alt="Photo 123" loading="lazy">
       </section>
 
       <!-- Galerie Vidéos -->
       <section class="gallery videos">
         <h2>Galerie Vidéos</h2>
-        <div class="videos-grid">
-          <div class="video-card">
-            <a href="https://vm.tiktok.com/ZNdTEGJEx/" target="_blank" rel="noopener noreferrer">
-              <img src="images/video1.jpg" alt="Exographie – Vidéo TikTok 1" loading="lazy">
-              <div class="play-icon">▶</div>
-            </a>
-          </div>
-          <div class="video-card">
-            <a href="https://vm.tiktok.com/ZNdTEceER/" target="_blank" rel="noopener noreferrer">
-              <img src="images/video2.jpg" alt="Exographie – Vidéo TikTok 2" loading="lazy">
-              <div class="play-icon">▶</div>
-            </a>
-          </div>
-          <div class="video-card">
-            <a href="https://vm.tiktok.com/ZNdTojABX/" target="_blank" rel="noopener noreferrer">
-              <img src="images/video3.jpg" alt="Exographie – Vidéo TikTok 3" loading="lazy">
-              <div class="play-icon">▶</div>
-            </a>
-          </div>
-          <div class="video-card">
-            <a href="https://vm.tiktok.com/ZNdTohdLw/" target="_blank" rel="noopener noreferrer">
-              <img src="images/video4.jpg" alt="Exographie – Vidéo TikTok 4" loading="lazy">
-              <div class="play-icon">▶</div>
-            </a>
-          </div>
-          <div class="video-card">
-            <a href="https://vm.tiktok.com/ZNdTorraw/" target="_blank" rel="noopener noreferrer">
-              <img src="images/video5.jpg" alt="Exographie – Vidéo TikTok 5" loading="lazy">
-              <div class="play-icon">▶</div>
-            </a>
-          </div>
-        </div>
+        <a class="video-card" href="https://vm.tiktok.com/ZNdTEGJEx/" target="_blank" rel="noopener noreferrer">
+          <img src="images/video1.jpg" alt="Vidéo TikTok 1" loading="lazy">
+          <div class="play-icon">▶</div>
+        </a>
+        <a class="video-card" href="https://vm.tiktok.com/ZNdTEceER/" target="_blank" rel="noopener noreferrer">
+          <img src="images/video2.jpg" alt="Vidéo TikTok 2" loading="lazy">
+          <div class="play-icon">▶</div>
+        </a>
+        <a class="video-card" href="https://vm.tiktok.com/ZNdTojABX/" target="_blank" rel="noopener noreferrer">
+          <img src="images/video3.jpg" alt="Vidéo TikTok 3" loading="lazy">
+          <div class="play-icon">▶</div>
+        </a>
+        <a class="video-card" href="https://vm.tiktok.com/ZNdTohdLw/" target="_blank" rel="noopener noreferrer">
+          <img src="images/video4.jpg" alt="Vidéo TikTok 4" loading="lazy">
+          <div class="play-icon">▶</div>
+        </a>
+        <a class="video-card" href="https://vm.tiktok.com/ZNdTorraw/" target="_blank" rel="noopener noreferrer">
+          <img src="images/video5.jpg" alt="Vidéo TikTok 5" loading="lazy">
+          <div class="play-icon">▶</div>
+        </a>
       </section>
     </div>
 
