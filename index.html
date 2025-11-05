@@ -2,20 +2,165 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exodus Photography</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Portfolio de photographie par Exodus, photographe béninois passionné. Découvrez un regard de grâce et de lumière sur le monde.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f6f3;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .gallery-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 40px 0;
+    }
+
+    .gallery-tabs button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      color: #111;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-tabs button.active {
+      background-color: #111;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin: 20px 0 40px;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: #111;
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    .gallery {
+      display: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .gallery.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    .contact {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .contact h2 {
+      color: #fff;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: opacity 0.3s;
+    }
+
+    .contact a:hover {
+      opacity: 0.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #bbb;
+      font-size: 0.9em;
+    }
+
+    footer .grace {
+      margin: 0;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2em; }
+      header p { font-size: 1em; }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Exodus Photography</h1>
-    <p>Je suis Exodus, béninois et passionné de vie.
-    Chaque image est un instant de grâce, un regard sur le monde, un bout de lumière capturé avec foi.
-    Bienvenue dans mon univers..</p>
+    <p>
+      Je suis <strong>Exodus</strong>, photographe béninois passionné par la vie et la lumière.<br>
+      Chaque image est un souffle de grâce, un regard sincère sur le monde,<br>
+      un fragment d’âme saisi avec foi et émotion.<br><br>
+      <em>Bienvenue dans mon univers.</em>
+    </p>
   </header>
 
   <main>
-    <!-- Boutons pour basculer -->
     <div class="gallery-tabs">
       <button id="btnPhotos" class="active">Galerie Photos</button>
       <button id="btnVideos">Galerie Vidéos</button>
@@ -25,7 +170,19 @@
       <!-- Galerie Photos -->
       <section class="gallery photos active">
         <h2>Galerie Photos</h2>
-        <!-- Images de 94 à 1 -->
+        <!-- Tes images -->
+        <img src="images/photo111.jpg" alt="photo123" />
+        <img src="images/photo110.jpg" alt="photo122" />
+        <img src="images/photo109.jpg" alt="photo121" />
+        <img src="images/photo108.jpg" alt="photo120" />
+        <img src="images/photo107.jpg" alt="photo119" />
+        <img src="images/photo106.jpg" alt="photo118" />
+        <img src="images/photo105.jpg" alt="photo117" />
+        <img src="images/photo104.jpg" alt="photo116" />
+        <img src="images/photo103.jpg" alt="photo115" />
+        <img src="images/photo102.jpg" alt="photo114" />
+        <img src="images/photo101.jpg" alt="photo113" />
+        <img src="images/photo100.jpg" alt="photo112" />
         <img src="images/photo111.jpg" alt="photo111" />
         <img src="images/photo110.jpg" alt="photo110" />
         <img src="images/photo109.jpg" alt="photo109" />
@@ -142,18 +299,19 @@
       <!-- Galerie Vidéos -->
       <section class="gallery videos">
         <h2>Galerie Vidéos</h2>
+        <p style="text-align:center;">À venir bientôt… 🎥</p>
       </section>
     </div>
 
     <section class="contact">
       <h2>Contact</h2>
       <p>
-        <a href="https://wa.me/2290155289731">WhatsApp</a> | 
+        <a href="https://wa.me/2290155289731">WhatsApp</a> |
         <a href="https://www.instagram.com/exodussaizonou?igsh=MWN4M3Q4YTVjZHRwbA%3D%3D&utm_source=qr">Instagram</a> |
         <a href="https://www.tiktok.com/@exodussaizonou10may?_t=ZN-8xFhg5LuGzW&_r=1">TikTok</a> |
         <a href="https://x.com/exodussaizonou?s=21">X</a> |
         <a href="https://www.threads.com/@exodus_saizonou?igshid=NTc4MTIwNjQ2YQ==">Threads</a> |
-        <a href="https://www.google.com/gasearch?q=exodus%20saizonou&source=sh/x/gs/m2/5">Google</a> |
+        <a href="https://www.google.com/gasearch?q=exodus%20saizonou">Google</a> |
         <a href="https://www.facebook.com/share/15mgCZMnh8/?mibextid=wwXIfr">Facebook</a>
       </p>
     </section>
