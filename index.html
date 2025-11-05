@@ -342,10 +342,43 @@
     </div>
 
     <section class="contact">
-      <h2>Contact</h2>
+      <<h2>Contact</h2>
       <p>
         <a href="https://wa.me/2290155289731">WhatsApp</a> |
         <a href="https://www.instagram.com/exodussaizonou">Instagram</a> |
         <a href="https://www.tiktok.com/@exodussaizonou10may">TikTok</a> |
         <a href="https://x.com/exodussaizonou?s=21">X</a> |
-        <a href="https://www.threads
+        <a href="https://www.threads.com/@exodus_saizonou">Threads</a> |
+        <a href="https://www.google.com/search?q=exodus+saizonou">Google</a> |
+        <a href="https://www.facebook.com/share/15mgCZMnh8/?mibextid=wwXIfr">Facebook</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="grace">Tout est grâce. Gloire à Dieu pour chaque instant capturé.</p>
+  </footer>
+
+  <script>
+    const btnPhotos = document.getElementById('btnPhotos');
+    const btnVideos = document.getElementById('btnVideos');
+    const galleryPhotos = document.querySelector('.gallery.photos');
+    const galleryVideos = document.querySelector('.gallery.videos');
+
+    btnPhotos.addEventListener('click', () => {
+      btnPhotos.classList.add('active');
+      btnVideos.classList.remove('active');
+      galleryPhotos.classList.add('active');
+      galleryVideos.classList.remove('active');
+    });
+
+    btnVideos.addEventListener('click', () => {
+      btnVideos.classList.add('active');
+      btnPhotos.classList.remove('active');
+      galleryVideos.classList.add('active');
+      galleryPhotos.classList.remove('active');
+
+ });
+  </script>
+</body>
+</html>
